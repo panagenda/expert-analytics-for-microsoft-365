@@ -9,7 +9,7 @@ if [ -f "./creds.sh" ]; then
 fi
 
 # customize those if needed
-export rg="officepro-tf-rg"
+export rg="expertanalytics-tf-rg"
 
 az account set --subscription $subscriptionId
 

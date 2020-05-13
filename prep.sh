@@ -12,13 +12,13 @@ fi
 az account set --subscription $subscriptionId
 
 # customize those if needed
-export rg="officepro-tf-rg"
+export rg="expertanalytics-tf-rg"
 export location="westeurope"
 export sku="Standard_LRS"
 export vaultName="oevault$RANDOM$RANDOM"
-export saName="officeprosa$RANDOM$RANDOM"
-export scName="officeprosc$RANDOM$RANDOM"
-export spName="http://officepro-sp-$RANDOM$RANDOM"
+export saName="expertanalyticssa$RANDOM$RANDOM"
+export scName="expertanalyticssc$RANDOM$RANDOM"
+export spName="http://expertanalytics-sp-$RANDOM$RANDOM"
 
 # creates a new resource group which will be used for the vault and TF state
 az group create --name "$rg" \

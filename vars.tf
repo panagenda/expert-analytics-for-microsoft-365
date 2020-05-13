@@ -1,6 +1,6 @@
 # Resource Group
 variable resource_group_name {
-    default = "officepro-rg"
+    default = "expertanalytics-rg"
 }
 
 # virutal machine size
@@ -15,7 +15,7 @@ variable data_disk {
 
 # prefix
 variable prefix {
-    default = "officepro"
+    default = "expertanalytics"
 }
 
 # location

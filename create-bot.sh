@@ -1,6 +1,6 @@
 #!/bin/bash
 # This script deploys an Azure Bot application
-# Example: ./create-bot.sh "officepro-rg" "westeurope" "my-oe.my-domain.com"
+# Example: ./create-bot.sh "expertanalytics-rg" "westeurope" "my-oe.my-domain.com"
 set -e
 
 if [[ -z $1 || -z $2 || -z $3 ]]; then
@@ -15,8 +15,8 @@ endpoint="https://$3:4443/bot/messages"
 
 # fixed configuration
 pricingTier=S1
-name="officepro-bot-$RANDOM$RANDOM"
-displayName="OP Bot"
+name="expertanalytics-bot-$RANDOM$RANDOM"
+displayName="EA Bot"
 iconUrl="http://help.binarytree.com/powerba-officepro/content/additional%20content/bt_powerba_bot_icons_orange%20192x192.png"
 
 # create app
