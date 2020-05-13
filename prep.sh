@@ -12,13 +12,13 @@ fi
 az account set --subscription $subscriptionId
 
 # customize those if needed
-export rg="expertanalytics-tf-rg"
+export rg="ea-tf-rg"
 export location="westeurope"
 export sku="Standard_LRS"
 export vaultName="oevault$RANDOM$RANDOM"
-export saName="expertanalyticssa$RANDOM$RANDOM"
-export scName="expertanalyticssc$RANDOM$RANDOM"
-export spName="http://expertanalytics-sp-$RANDOM$RANDOM"
+export saName="easa$RANDOM$RANDOM"
+export scName="easc$RANDOM$RANDOM"
+export spName="http://ea-sp-$RANDOM$RANDOM"
 
 # creates a new resource group which will be used for the vault and TF state
 az group create --name "$rg" \

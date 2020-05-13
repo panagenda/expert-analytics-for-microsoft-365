@@ -11,7 +11,7 @@ fi
 az account set --subscription $subscriptionId
 
 # customize those if needed
-export rg="expertanalytics-tf-rg"
+export rg="ea-tf-rg"
 
 # get vault
 export vaultName=$(az keyvault list --subscription=$subscriptionId -g $rg -o tsv | awk '{print $3}')

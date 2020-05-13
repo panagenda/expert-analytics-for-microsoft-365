@@ -1,6 +1,6 @@
 # Resource Group
 variable resource_group_name {
-    default = "expertanalytics-rg"
+    default = "ea-rg"
 }
 
 # virutal machine size
@@ -15,7 +15,7 @@ variable data_disk {
 
 # prefix
 variable prefix {
-    default = "expertanalytics"
+    default = "ea"
 }
 
 # location
