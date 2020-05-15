@@ -146,7 +146,7 @@ resource "azurerm_network_security_rule" "oe_bots_kafka" {
 }
 
   resource "azurerm_network_security_rule" "oe_public_https" {
-  name                        = "${var.prefix}-sec-role--public-https"
+  name                        = "${var.prefix}-sec-role-oe-public-https"
   count                       = var.subnet == "" ? 1 : 0
   priority                    = 108
   direction                   = "Inbound"

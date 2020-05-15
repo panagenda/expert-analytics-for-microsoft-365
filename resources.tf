@@ -37,7 +37,7 @@ resource "azurerm_storage_blob" "oe" {
   storage_container_name = azurerm_storage_container.oe.name
   source_uri = var.source_vhd_path
   type = "Page"
-
+  
   lifecycle {
     # enable to prevent recreation
     prevent_destroy = "false"
