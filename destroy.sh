@@ -1,11 +1,11 @@
 #!/bin/bash
-# This script is used to destroy the OE infrastructure
+# This script is used to destroy the expert analytics for microsoft 365 infrastructure
 
 set -e
 
-# exports secrets if available; export manually otherwise
-if [ -f "./creds.sh" ]; then
-    source ./creds.sh
+if [ -z "$subscriptionId" ] || [ -z "$tenantId" ] || [ -z "$template" ]; then
+    echo "Aborting the script because one of the variables ['subscriptionId', 'tenantId', 'template]."
+    exit 1
 fi
 
 az account set --subscription $subscriptionId

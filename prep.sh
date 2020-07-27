@@ -4,9 +4,9 @@
 
 set -e
 
-# exports secrets if available; export manually otherwise
-if [ -f "./creds.sh" ]; then
-    source ./creds.sh
+if [ -z "$subscriptionId" ]; then
+    echo "Aborting the script because the variable 'subscriptionId' is not set."
+    exit 1
 fi
 
 az account set --subscription $subscriptionId

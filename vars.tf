@@ -9,8 +9,18 @@ variable vm_size {
 }
 
 # data disk size
-variable data_disk {
+variable data_disk_size {
     default = "100"
+}
+
+# data disk type
+variable data_disk_type {
+    default = "Standard_LRS"
+}
+
+# os disk type
+variable os_disk_type {
+    default = "Standard_LRS"
 }
 
 # prefix

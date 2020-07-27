@@ -14,7 +14,7 @@ resource "azurerm_virtual_machine" "oe" {
     name              = "${var.prefix}-osdisk"
     os_type           = "Linux"
     managed_disk_id   = azurerm_managed_disk.oe.id
-    managed_disk_type = "Standard_LRS"
+    managed_disk_type = var.os_disk_type
     caching           = "ReadWrite"
     create_option     = "Attach"
   }
@@ -33,9 +33,9 @@ resource "azurerm_managed_disk" "oe-data" {
   count                = var.subnet == "" ? 0 : 1
   location             = azurerm_resource_group.oe.location
   resource_group_name  = azurerm_resource_group.oe.name
-  storage_account_type = "Standard_LRS"
+  storage_account_type = var.data_disk_type
   create_option        = "Empty"
-  disk_size_gb         = var.data_disk
+  disk_size_gb         = var.data_disk_size
 }
 resource "azurerm_virtual_machine_data_disk_attachment" "oe" {
   managed_disk_id    = azurerm_managed_disk.oe-data[0].id
